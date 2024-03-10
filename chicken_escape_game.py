@@ -12,7 +12,11 @@ chicken_y = 0
 keep_alive = True
 #game loop
 while keep_alive:
-    chicken_y = chicken_y + 5
+    # reset y-coordinate of chicken when it falls out of the screen
+    if chicken_y > 600:
+        chicken_y = 0
+    else:
+        chicken_y = chicken_y + 5
     #display the images
     screen.blit(background, [0,0])
     screen.blit(user, [150,520])
