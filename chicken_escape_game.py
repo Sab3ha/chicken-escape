@@ -10,6 +10,7 @@ chicken = pygame.image.load('chicken-escape/chicken.png')
 chicken_y = 0
 
 keep_alive = True
+clock = pygame.time.Clock()
 #game loop
 while keep_alive:
     # reset y-coordinate of chicken when it falls out of the screen
@@ -21,4 +22,7 @@ while keep_alive:
     screen.blit(background, [0,0])
     screen.blit(user, [150,520])
     screen.blit(chicken, [0,chicken_y])
+    screen.blit(chicken, [150,chicken_y])
+    screen.blit(chicken, [280,chicken_y])
     pygame.display.update()
+    clock.tick(60)
