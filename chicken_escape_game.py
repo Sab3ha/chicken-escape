@@ -28,9 +28,9 @@ clock = pygame.time.Clock()
 while keep_alive:
     pygame.event.get()
     keys =  pygame.key.get_pressed()
-    if keys[pygame.K_RIGHT]:
+    if keys[pygame.K_RIGHT] and user_x < 280:
         user_x = user_x + 10
-    elif keys[pygame.K_LEFT]:
+    elif keys[pygame.K_LEFT] and user_x > 0:
         user_x = user_x - 10
     
     update_chicken_position(0)
