@@ -13,6 +13,6 @@ keep_alive = True
 while keep_alive:
     #display the images
     screen.blit(background, [0,0])
-    screen.blit(user, [0,0])
+    screen.blit(user, [150,520])
     screen.blit(chicken, [0,0])
     pygame.display.update()
